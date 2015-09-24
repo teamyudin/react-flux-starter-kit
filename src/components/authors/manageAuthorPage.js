@@ -6,6 +6,7 @@ var AuthorForm = require('./AuthorForm');
 var AuthorActions = require('../../actions/authorActions');
 var AuthorStore = require('../../stores/authorStore');
 var Toastr = require('toastr');
+var LoginStore = require('../../stores/loginStore');
 
 var ManageAuthorPage = React.createClass({
   mixins: [
@@ -27,6 +28,12 @@ var ManageAuthorPage = React.createClass({
     };
   },
   componentWillMount: function(){
+
+    if(!LoginStore.isLoggedIn())
+    {
+      this.transitionTo("unauthorized");
+    }
+
     var authorId = this.props.params.id; // from url
 
     if(authorId)

@@ -15,6 +15,8 @@ var routes = (
     <Route name='addAuthor' path="author" handler={require('./components/authors/manageAuthorPage')}/>
     <Route name='manageAuthor' path="author/:id" handler={require('./components/authors/manageAuthorPage')}/>
     <Route name='about' handler={require('./components/about/aboutPage')}/>
+    <Route name='unauthorized' handler={require('./components/unauthorizedPage')}/>
+    <Route name="auth" path="/access_token*" handler={require('./components/authPage')}/>
     <NotFoundRoute handler={require('./components/NotFoundPage')}/>
     <Redirect from="about-us" to="about"/>
     <Redirect from="about/*" to="about"/>

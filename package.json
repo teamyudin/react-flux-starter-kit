@@ -9,6 +9,7 @@
   "author": "Dmitriy Yudin",
   "license": "ISC",
   "dependencies": {
+    "auth0-lock": "^7.9.5",
     "bootstrap": "^3.3.5",
     "browserify": "^11.0.1",
     "flux": "^2.0.3",
@@ -25,5 +26,10 @@
     "reactify": "^1.1.1",
     "toastr": "^2.1.2",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "devDependencies": {
+    "brfs": "0.0.8",
+    "ejsify": "0.1.0",
+    "packageify": "^0.2.0"
+  }  
 }
